@@ -34,7 +34,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = zooAnimals.map(zooAnimal => {
-  return zooAnimal.name.lowCaseAnimalNames()
+  return zooAnimal.animal_name.toLowerCase()
 });
 
 console.log(lowCaseAnimalNames);
@@ -45,7 +45,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 
-const lowPopulationAnimals = zooAnimal.filter(zooAnimal => zooAnimal.population < 5);
+const lowPopulationAnimals = zooAnimals.filter(zooAnimal => zooAnimal.population < 5);
 
 console.log(lowPopulationAnimals);
 
@@ -54,7 +54,7 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = zooAnimal.filter((totalPopulation, zooAnimal) => totalPopulation + zooAnimal.population.length, 0) ;
+const populationTotal = zooAnimals.filter((totalPopulation, zooAnimal) => totalPopulation + zooAnimal.population, 0) ;
 
 console.log(populationTotal);
 
@@ -77,6 +77,11 @@ function consume (a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function add (num1, num2) {
+  return num1 + num2;
+}
+
 function multiply (num1, num2) {
   return num1 * num2;
 }
