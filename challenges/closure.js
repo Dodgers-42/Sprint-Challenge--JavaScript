@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-It can access the variable internal because it's console.logging it. And its on itnernal and not the Global Scope.
+It can access the variable internal because it's a nested function and can access other local function, in the same Scope.
 
 /* Task 2: Counter */
 
